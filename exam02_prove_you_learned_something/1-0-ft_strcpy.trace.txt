@@ -1,0 +1,63 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r9p20.42.fr
+Darwin 15.6.0 x86_64
+$> date
+Fri Aug 19 18:20:52 CEST 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-exam02/exam_20160819/pichrist
+
+= Git history ==================================================================
+$> git -C /var/folders/w4/n9qlj0sj3qq_wg_3lbb_xxvw0000gq/T/tmpnO9Sfd/user log --pretty='%H - %an, %ad : %s'
+27f2eb569772449b23a36b2c52aed2af3177ac34 - Exam 42, Fri Aug 19 18:20:43 2016 +0200 : strcpy
+ad620b87647b9170d99f3177a7b4ddae9d821cc4 - Exam 42, Fri Aug 19 18:05:11 2016 +0200 : hello
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/w4/n9qlj0sj3qq_wg_3lbb_xxvw0000gq/T/tmpnO9Sfd/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  432 Aug 19 18:20 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Aug 19 18:20 ft_strcpy
+drwxr-xr-x  3 deepthought  deepthought  102 Aug 19 18:20 hello
+
+/var/folders/w4/n9qlj0sj3qq_wg_3lbb_xxvw0000gq/T/tmpnO9Sfd/user/ft_strcpy:
+total 8
+-rw-r--r--  1 deepthought  deepthought  986 Aug 19 18:20 ft_strcpy.c
+
+/var/folders/w4/n9qlj0sj3qq_wg_3lbb_xxvw0000gq/T/tmpnO9Sfd/user/hello:
+total 8
+-rw-r--r--  1 deepthought  deepthought  974 Aug 19 18:20 hello.c
+ 
+= ft_strcpy ====================================================================
+$> clang -Wextra -Wall -Werror main.c ft_strcpy.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./qanesmitssn1at43ptra6uzl ""
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./m9crsdvq7uyg1u8gz0mp4aqp "1Fvj7LKqXoOdiUfmw"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+--- user_output_test2	2016-08-19 18:20:54.000000000 +0200$
++++ test2.output	2016-08-19 18:20:54.000000000 +0200$
+@@ -1 +1 @@$
+-Incorrect$
++Correct$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

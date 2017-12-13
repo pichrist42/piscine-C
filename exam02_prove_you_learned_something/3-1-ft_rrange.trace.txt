@@ -1,0 +1,85 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r8p16.42.fr
+Darwin 15.6.0 x86_64
+$> date
+Fri Aug 19 20:47:46 CEST 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-exam02/exam_20160819/pichrist
+
+= Git history ==================================================================
+$> git -C /var/folders/qt/0vz_l7bx3qx1l27j38jmrf0m0000gq/T/tmpIBr0Ct/user log --pretty='%H - %an, %ad : %s'
+3f4324fa81242c7fb7eaa8e9ba3c33e4d88c750a - Exam 42, Fri Aug 19 20:47:26 2016 +0200 : rrange
+61ab036ebd215fa87ba17ac5d66000e394cd12ec - Exam 42, Fri Aug 19 20:16:02 2016 +0200 : add truc
+f80bb38dc346ac104dbe9bd0cc1d668d4bd02b74 - Exam 42, Fri Aug 19 19:29:37 2016 +0200 : inter
+a12993085e7c87a26d6f2a2186388e5085a9ae9a - Exam 42, Fri Aug 19 18:24:21 2016 +0200 : ftstrlen
+27f2eb569772449b23a36b2c52aed2af3177ac34 - Exam 42, Fri Aug 19 18:20:43 2016 +0200 : strcpy
+ad620b87647b9170d99f3177a7b4ddae9d821cc4 - Exam 42, Fri Aug 19 18:05:11 2016 +0200 : hello
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/qt/0vz_l7bx3qx1l27j38jmrf0m0000gq/T/tmpIBr0Ct/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1392 Aug 19 20:47 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:47 add_prime_sum
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:47 ft_rrange
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:47 ft_strcpy
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:47 ft_strlen
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:47 hello
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:47 inter
+
+/var/folders/qt/0vz_l7bx3qx1l27j38jmrf0m0000gq/T/tmpIBr0Ct/user/add_prime_sum:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1585 Aug 19 20:47 add_prime_sum.c
+
+/var/folders/qt/0vz_l7bx3qx1l27j38jmrf0m0000gq/T/tmpIBr0Ct/user/ft_rrange:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1268 Aug 19 20:47 ft_rrange.c
+
+/var/folders/qt/0vz_l7bx3qx1l27j38jmrf0m0000gq/T/tmpIBr0Ct/user/ft_strcpy:
+total 8
+-rw-r--r--  1 deepthought  deepthought  986 Aug 19 20:47 ft_strcpy.c
+
+/var/folders/qt/0vz_l7bx3qx1l27j38jmrf0m0000gq/T/tmpIBr0Ct/user/ft_strlen:
+total 8
+-rw-r--r--  1 deepthought  deepthought  970 Aug 19 20:47 ft_strlen.c
+
+/var/folders/qt/0vz_l7bx3qx1l27j38jmrf0m0000gq/T/tmpIBr0Ct/user/hello:
+total 8
+-rw-r--r--  1 deepthought  deepthought  974 Aug 19 20:47 hello.c
+
+/var/folders/qt/0vz_l7bx3qx1l27j38jmrf0m0000gq/T/tmpIBr0Ct/user/inter:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1413 Aug 19 20:47 inter.c
+ 
+= ft_rrange ====================================================================
+$> clang -Wextra -Wall -Werror main.c ft_rrange.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./74o677lyotnzvym79ix2bxe0 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./y0cxhfh9kzm7dvunqzk1efss "21" "2313" "12"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./i1stngzlx7z8ikp27he0mtme "2147483647" "2147483640" "7"
+Command './i1stngzlx7z8ikp27he0mtme "2147483647" "2147483640" "7"' got killed by a Segmentation fault (Signal -11)
+Grade: 0
+
+= Final grade: 0 ===============================================================

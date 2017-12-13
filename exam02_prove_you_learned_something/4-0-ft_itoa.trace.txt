@@ -1,0 +1,114 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r11p8.42.fr
+Darwin 15.6.0 x86_64
+$> date
+Fri Aug 19 21:34:22 CEST 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-exam02/exam_20160819/pichrist
+
+= Git history ==================================================================
+$> git -C /var/folders/_s/p6wnhtts77dgqdm17wpq6xtm0000gq/T/tmpbUcqIp/user log --pretty='%H - %an, %ad : %s'
+62b05165a28ebbe3f9958086938cc6d4b57b0e60 - Exam 42, Fri Aug 19 21:33:48 2016 +0200 : itoa
+15535f43525d8f593d789c2ab0ac1c527f210854 - Exam 42, Fri Aug 19 21:07:50 2016 +0200 : pgcd
+3f4324fa81242c7fb7eaa8e9ba3c33e4d88c750a - Exam 42, Fri Aug 19 20:47:26 2016 +0200 : rrange
+61ab036ebd215fa87ba17ac5d66000e394cd12ec - Exam 42, Fri Aug 19 20:16:02 2016 +0200 : add truc
+f80bb38dc346ac104dbe9bd0cc1d668d4bd02b74 - Exam 42, Fri Aug 19 19:29:37 2016 +0200 : inter
+a12993085e7c87a26d6f2a2186388e5085a9ae9a - Exam 42, Fri Aug 19 18:24:21 2016 +0200 : ftstrlen
+27f2eb569772449b23a36b2c52aed2af3177ac34 - Exam 42, Fri Aug 19 18:20:43 2016 +0200 : strcpy
+ad620b87647b9170d99f3177a7b4ddae9d821cc4 - Exam 42, Fri Aug 19 18:05:11 2016 +0200 : hello
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/_s/p6wnhtts77dgqdm17wpq6xtm0000gq/T/tmpbUcqIp/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1863 Aug 19 21:34 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 21:34 add_prime_sum
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 21:34 ft_itoa
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 21:34 ft_rrange
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 21:34 ft_strcpy
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 21:34 ft_strlen
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 21:34 hello
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 21:34 inter
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 21:34 pgcd
+
+/var/folders/_s/p6wnhtts77dgqdm17wpq6xtm0000gq/T/tmpbUcqIp/user/add_prime_sum:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1585 Aug 19 21:34 add_prime_sum.c
+
+/var/folders/_s/p6wnhtts77dgqdm17wpq6xtm0000gq/T/tmpbUcqIp/user/ft_itoa:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1390 Aug 19 21:34 ft_itoa.c
+
+/var/folders/_s/p6wnhtts77dgqdm17wpq6xtm0000gq/T/tmpbUcqIp/user/ft_rrange:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1268 Aug 19 21:34 ft_rrange.c
+
+/var/folders/_s/p6wnhtts77dgqdm17wpq6xtm0000gq/T/tmpbUcqIp/user/ft_strcpy:
+total 8
+-rw-r--r--  1 deepthought  deepthought  986 Aug 19 21:34 ft_strcpy.c
+
+/var/folders/_s/p6wnhtts77dgqdm17wpq6xtm0000gq/T/tmpbUcqIp/user/ft_strlen:
+total 8
+-rw-r--r--  1 deepthought  deepthought  970 Aug 19 21:34 ft_strlen.c
+
+/var/folders/_s/p6wnhtts77dgqdm17wpq6xtm0000gq/T/tmpbUcqIp/user/hello:
+total 8
+-rw-r--r--  1 deepthought  deepthought  974 Aug 19 21:34 hello.c
+
+/var/folders/_s/p6wnhtts77dgqdm17wpq6xtm0000gq/T/tmpbUcqIp/user/inter:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1413 Aug 19 21:34 inter.c
+
+/var/folders/_s/p6wnhtts77dgqdm17wpq6xtm0000gq/T/tmpbUcqIp/user/pgcd:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1364 Aug 19 21:34 pgcd.c
+ 
+= ft_itoa ======================================================================
+$> clang -Wextra -Wall -Werror main.c ft_itoa.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./qsai122derbuo7ookn47gpcw 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./9vlubi8sub75ysmfpnhz4b4o "1" "2" "3" "4" "5" "6"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./tqqjwgmfa4ik3uw18eku1ztw 0
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./wfk74xa5bt8g7t80bj8pfhi0 2147483647
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./qmaev272p07bu19iqbads39b -2147483648
+$> diff -U 3 user_output_test5 test5.output | cat -e
+--- user_output_test5	2016-08-19 21:34:24.000000000 +0200$
++++ test5.output	2016-08-19 21:34:24.000000000 +0200$
+@@ -1 +1 @@$
+-./,),(-*,($
++-2147483648$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

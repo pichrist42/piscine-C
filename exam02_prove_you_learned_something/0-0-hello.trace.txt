@@ -1,0 +1,47 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r10p14.42.fr
+Darwin 15.6.0 x86_64
+$> date
+Fri Aug 19 18:05:48 CEST 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-exam02/exam_20160819/pichrist
+
+= Git history ==================================================================
+$> git -C /var/folders/g8/1jd28bvn305f4yyhv7773x_w0000gq/T/tmpbqTedq/user log --pretty='%H - %an, %ad : %s'
+ad620b87647b9170d99f3177a7b4ddae9d821cc4 - Exam 42, Fri Aug 19 18:05:11 2016 +0200 : hello
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/g8/1jd28bvn305f4yyhv7773x_w0000gq/T/tmpbqTedq/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  211 Aug 19 18:05 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Aug 19 18:05 hello
+
+/var/folders/g8/1jd28bvn305f4yyhv7773x_w0000gq/T/tmpbqTedq/user/hello:
+total 8
+-rw-r--r--  1 deepthought  deepthought  974 Aug 19 18:05 hello.c
+ 
+= hello ========================================================================
+$> clang -Wextra -Wall -Werror hello.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./2u8spy4mz0sbzif8kcobzzyr test1.prm
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

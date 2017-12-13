@@ -1,0 +1,96 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r13p11.42.fr
+Darwin 15.6.0 x86_64
+$> date
+Fri Aug 19 20:16:12 CEST 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-exam02/exam_20160819/pichrist
+
+= Git history ==================================================================
+$> git -C /var/folders/0t/fw9s0lm51xb21vfhbchvnx_40000gq/T/tmpCM96wU/user log --pretty='%H - %an, %ad : %s'
+61ab036ebd215fa87ba17ac5d66000e394cd12ec - Exam 42, Fri Aug 19 20:16:02 2016 +0200 : add truc
+f80bb38dc346ac104dbe9bd0cc1d668d4bd02b74 - Exam 42, Fri Aug 19 19:29:37 2016 +0200 : inter
+a12993085e7c87a26d6f2a2186388e5085a9ae9a - Exam 42, Fri Aug 19 18:24:21 2016 +0200 : ftstrlen
+27f2eb569772449b23a36b2c52aed2af3177ac34 - Exam 42, Fri Aug 19 18:20:43 2016 +0200 : strcpy
+ad620b87647b9170d99f3177a7b4ddae9d821cc4 - Exam 42, Fri Aug 19 18:05:11 2016 +0200 : hello
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/0t/fw9s0lm51xb21vfhbchvnx_40000gq/T/tmpCM96wU/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1153 Aug 19 20:16 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:16 add_prime_sum
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:16 ft_strcpy
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:16 ft_strlen
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:16 hello
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 19 20:16 inter
+
+/var/folders/0t/fw9s0lm51xb21vfhbchvnx_40000gq/T/tmpCM96wU/user/add_prime_sum:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1585 Aug 19 20:16 add_prime_sum.c
+
+/var/folders/0t/fw9s0lm51xb21vfhbchvnx_40000gq/T/tmpCM96wU/user/ft_strcpy:
+total 8
+-rw-r--r--  1 deepthought  deepthought  986 Aug 19 20:16 ft_strcpy.c
+
+/var/folders/0t/fw9s0lm51xb21vfhbchvnx_40000gq/T/tmpCM96wU/user/ft_strlen:
+total 8
+-rw-r--r--  1 deepthought  deepthought  970 Aug 19 20:16 ft_strlen.c
+
+/var/folders/0t/fw9s0lm51xb21vfhbchvnx_40000gq/T/tmpCM96wU/user/hello:
+total 8
+-rw-r--r--  1 deepthought  deepthought  974 Aug 19 20:16 hello.c
+
+/var/folders/0t/fw9s0lm51xb21vfhbchvnx_40000gq/T/tmpCM96wU/user/inter:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1413 Aug 19 20:16 inter.c
+ 
+= add_prime_sum ================================================================
+$> clang -Wextra -Wall -Werror add_prime_sum.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./tc8j1g8j9rxq7me9bhjaqyhg 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./kavfmxynfx575y03ysacxc21 "17" "23" "42"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./ea5hgh7ruuql0o9qemwi7sji "-1680"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./lu8kb310ykzghvaflcys090d "-315"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./n6vhv16vmnl0mw002ee5bai8 "616"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+--- user_output_test5	2016-08-19 20:16:14.000000000 +0200$
++++ test5.output	2016-08-19 20:16:14.000000000 +0200$
+@@ -1 +1 @@$
+-91007$
++31117$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
